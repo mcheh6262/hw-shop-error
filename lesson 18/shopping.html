@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <title>Document</title>
+   <style>
+      .kk {
+         font-size: 25px;
+         color: rgb(3, 129, 16);
+      }
+      .ty {
+         font-size: 40px;
+         text-align: center;
+
+      }
+   </style>
+   <h2 class="ty">fruit shop</h2>
+</head>
+<body>
+   <h3>what do you whan to buy?</h3>
+   <form>
+   <img type="button" onclick="banna()" id="1" src="banna.jpg">banna</button>
+   <img type="button" onclick="orange()" id="2" src="orange.jpg">orange</button>
+   <img type="button" onclick="kiwi()" id="3" src="kiwi.jpg">kiwi</button>
+   <img type="button" onclick="apple()" id="4" src="apple.jpg">aplle</button>
+
+   <p class="kk">price to fruits: <br/>
+      banna = 2 <br/>
+      orange = 3 <br/>
+      kiwi = 4 <br/>
+      apple = 5
+     </p> 
+   
+  <p> Total: <input type="number" id="fruits"> </p>
+  <label for="fruits"></label> <br>
+ 
+</form>
+ 
+<script>
+  
+   const price = [2,3,4,5]
+   
+   function banna() {
+      
+      nam = (document.getElementById('fruits').value)
+      ll = (`${price[0] * nam}`)
+      document.write(`${ll}`)
+      try {
+      for(e in price) {
+         if (e > 6) {
+            let error = new Error(price[e] == "")
+            throw error;
+         }
+      }
+      }
+      catch(error) {
+         console.log(error);
+   }
+      function orange() {
+      nam = (document.getElementById('fruits').value)
+      ll = (`${price[1] * nam}`)
+      document.write(`${ll}`)
+      }
+      function kiwi() {
+      nam = (document.getElementById('fruits').value)
+      ll = (`${price[2] * nam}`)
+      document.write(`${ll}`)
+      }
+      function apple() {
+      nam = (document.getElementById('fruits').value)
+      ll = (`${price[3] * nam}`)
+      document.write(`${ll}`)
+      }
+   }
+
+
+  
+</script>
+
+   
+</body>
+</html>
+
+ 
+ 
+
+
