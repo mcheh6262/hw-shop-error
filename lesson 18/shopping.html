@@ -45,17 +45,19 @@
       nam = (document.getElementById('fruits').value)
       ll = (`${price[0] * nam}`)
       document.write(`${ll}`)
-      try {
+      try{
       for(e in price) {
          if (e > 6) {
-            let error = new Error(price[e] == "")
-            throw error;
+            let error = new Error(price[e])
+            throw error}
+         } }
+         catch(error) {
+            console.log();
+         } 
          }
-      }
-      }
-      catch(error) {
-         console.log(error);
-   }
+      
+      
+ 
       function orange() {
       nam = (document.getElementById('fruits').value)
       ll = (`${price[1] * nam}`)
@@ -71,7 +73,7 @@
       ll = (`${price[3] * nam}`)
       document.write(`${ll}`)
       }
-   }
+   
 
 
   
